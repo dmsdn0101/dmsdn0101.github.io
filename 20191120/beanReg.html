@@ -25,26 +25,26 @@ ul.level_1 > li > ul {list-style:none;}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 $(function(){
-	$('#stud_id').blur(function){ 
-	$.ajax({
-  	type:"POST",
-    url:"http://203.237.142.245/~s20151671/week13/idcheck.jsp",
-    data:{
-    	"stud_id":$('#stud_id').val()
-    },
-    success:function(data){
-    	//console.log($.trim(data));
-      if($.trim(data) == "YES"){
-      	//alert('사용가능');
-        $('#idcheck').html('<b style="font-size:14px;color:blue">가능</b>');
-        $('#regBtn').attr('disabled',false);
-      } else{	//alert('사용불가');
-      	$('#idcheck').html('<b style="font-size:14px;color:red">불가</b>');
-        $('#regBtn').attr('disabled',true);
-      }
-    }
-  });
-});
+	$('#stud_id').blur(function(){ 
+		$.ajax({
+  		type:"POST",
+    	url:"http://203.237.142.245/~s20151671/week13/idcheck.jsp",
+    	data:{
+    		"stud_id":$('#stud_id').val()
+    	},
+    	success:function(data){
+    		//console.log($.trim(data));
+     	 if($.trim(data) == "YES"){
+     	 	//alert('사용가능');
+     	   $('#idcheck').html('<b style="font-size:14px;color:blue">가능</b>');
+     	   $('#regBtn').attr('disabled',false);
+     	 } else{	//alert('사용불가');
+     	 	$('#idcheck').html('<b style="font-size:14px;color:red">불가</b>');
+     	   $('#regBtn').attr('disabled',true);
+     	 }
+   	 }
+  	});
+	});
 });
 </script>
 <title>로그인 실습</title></head>

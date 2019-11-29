@@ -25,29 +25,28 @@ ul.level_1 > li > ul {list-style:none;}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 $(function(){
-	$('#stud_id').blur(function(){ 
-		$.ajax({
-  		type:"POST",
-    	url:"http://203.237.142.245/~s20151671/week13/idcheck.jsp",
-    	data:{
-    		"stud_id":$('#stud_id').val()
-    	},
-    	success:function(data){
-    		//console.log($.trim(data));
-     	 if($.trim(data) == "YES"){
-     	 	//alert('사용가능');
-     	   $('#idcheck').html('<b style="font-size:14px;color:blue">가능</b>');
-     	   $('#regBtn').attr('disabled',false);
-     	 } else{	//alert('사용불가');
-     	 	$('#idcheck').html('<b style="font-size:14px;color:red">불가</b>');
-     	   $('#regBtn').attr('disabled',true);
-     	 }
-   	 }
-  	});
-	});
+	$('#stud_id').blur(function(){
+  	$.ajax({
+    	type:"POST",
+      url:"http://203.237.142.245/~s20151671/week13/idcheck.jsp",
+      data:{
+      	"stud_id":$('#stud_id').val()
+      },
+      success:function(data){
+      	//console.log($.trim(data));
+        if($.trim(data) == "YES"){
+        	//alert('사용가능');
+          $('#idcheck').html('<b style="font-size:14px; color:blue">가능</b>');
+          $('#regBtn').attr('disabled',false);
+        } else {
+        	$('#idcheck').html('<b style="font-size:14px; color:blue">불가</b>');
+          $('#regBtn').attr('disabled',true);
+        }
+      }
+    });
+  });
 });
-</script>
-<title>로그인 실습</title></head>
+</script><title>로그인 실습</title></head>
 <body><header><h2>실습을 환영합니다</h2></header>
 <nav><ul>
 <li><a href="./beanLogin.html">로그인</a></li><li><a href="./beanReg.html">회원등록</a></li></ul></nav>
@@ -84,5 +83,6 @@ $(function(){
     <input id="regBtn" class="button_form" type="submit" value="회원등록">
     <input class="button_form" type="reset" value="취 소">
     </fieldset>
-  </form></section>
-  <footer><p>&copy;20XX Made by Korea. All rights reserved.</p></footer></body></html>
+  </form>
+</section>
+<footer><p>&copy;20XX Made by Korea. All rights reserved.</p></footer></body></html>

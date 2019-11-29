@@ -26,63 +26,35 @@ ul.level_1 > li > ul {list-style:none;}
 <img src="https://dmsdn0101.github.io/homework/picture/wallpaper-424947.jpg" height="200px" width="100%">
 <h2>CPU 환영합니다</h2></header>
 <nav><ul>
-<li><a href="./CPULogin.html">로그인</a></li><li><a href="./CPUReg.html">회원등록</a></li></ul></nav>
+<li><a href="./CPULogin.html">제품검색</a></li><li><a href="./CPUReg.html">제품등록</a></li></ul></nav>
 <section>
   <form action="./CPUReg.jsp" method="post">
-    <fieldset class="fset"><legend>회원등록</legend>
-    <fieldset class="fset"><legend>이름/이메일</legend>
-    <label class="label_form" for="stud_name">이름</label>
-    <input type="text" name="stud_name" size="18" maxlength="50" required/><br/>
-    <label id="label_form2" class="label_form" for="stud_email">이메일</label>
-    <input type="text" name="stud_email" size="18" maxlength="50"/><br/>
-    <label id="label_form3" class="label_form" for="stud_phone">전화번호</label>
-    <input type="text" name="stud_phone" size="18" maxlength="50"/><br/></fieldset>
-    <fieldset class="fset"><legend>아이디/비밀번호</legend>
-    <label class="label_form" for="stud_id">아이디</label>
-    <input type="text" name="stud_id" size="18" maxlength="50" required/>
-      <button id="dupBtn">중복확인</button><br/>
-    <label class="label_form" for="stud_passwd">비밀번호</label>
-    <input type="password" name="stud_passwd" size="18" maxlength="50" required/><br/>
-    </fieldset>
+    <fieldset class="fset"><legend>제품등록</legend>
     <fieldset class="fset"><legend>회사</legend>
     <label for="stud_gender">Intel</label>
-    <input class="id_form" type="radio" name="stud_gender" value="여자" checked/>
+    <input class="id_form" type="radio" name="stud_gender" value="intel" checked/>
     <label for="stud_gender">AMD</label>
-    <input class="id_form" type="radio" name="stud_gender" value="남자"/></fieldset>
+    <input class="id_form" type="radio" name="stud_gender" value="amd"/></fieldset>
     <fieldset class="fset"><legend>세대</legend>
     <label for="stud_hobby1">인텔 3세대</label>
-    <input class="id_form" type="radio" name="stud_hobby" value="인텔 3세대"/>
+    <input class="id_form" type="radio" name="stud_hobby" value="intel3rd"/>
     <label for="stud_hobby2">인텔 5세대</label>
-    <input class="id_form" type="radio" name="stud_hobby" value="인텔 5세대"/>
+    <input class="id_form" type="radio" name="stud_hobby" value="intel5rd"/>
     <label for="stud_hobby3">인텔 7세대</label>
-    <input class="id_form" type="radio" name="stud_hobby" value="인텔 7세대"/>
+    <input class="id_form" type="radio" name="stud_hobby" value="intel7rd"/>
     <label for="stud_hobby4">인텔 9세대</label>
-    <input class="id_form" type="radio" name="stud_hobby" value="인텔 9세대"/>
+    <input class="id_form" type="radio" name="stud_hobby" value="intel9rd"/>
     <label for="stud_hobby5">암드 1세대</label>
-    <input class="id_form" type="radio" name="stud_hobby" value="암드 1세대"/>
+    <input class="id_form" type="radio" name="stud_hobby" value="amd1rd"/>
     <label for="stud_hobby6">암드 2세대</label>
-    <input class="id_form" type="radio" name="stud_hobby" value="암드 2세대"/>
+    <input class="id_form" type="radio" name="stud_hobby" value="amd2rd"/>
     <label for="stud_hobby7">암드 3세대</label>
-    <input class="id_form" type="radio" name="stud_hobby" value="암드 3세대"/>
+    <input class="id_form" type="radio" name="stud_hobby" value="amd3rd"/>
     </fieldset>
     <fieldset class="fset"><legend>버전</legend>
-    <select name="version">
-    <option value="none" selected="selected">선택하세요</option>
-     <optgroup label="인텔">
-        <option value="i3-8100">i3-8100</option>
-        <option value="i5-4690">i5-4690</option>
-        <option value="i7-7700">i7-7700</option>
-        <option value="i9-9900">i9-9900</option>
-        <option value="add">추가 예정</option>
-     </optgroup>
-     <optgroup label="암드">
-        <option value="ryzen 5 1600">ryzen 5 1600</option>
-        <option value="ryzen 5 2600">ryzen 5 2600</option>
-        <option value="add">추가 예정</option>
-     </optgroup>
-    </select>
+    <input type="text" name="modelname" size="18" maxlength="50" required/>
     </fieldset><br/>
-    <input class="button_form" type="submit" value="회원등록">
+    <input class="button_form" type="submit" value="제품등록">
     <input class="button_form" type="reset" value="취 소">
     </fieldset>
   </form></section>

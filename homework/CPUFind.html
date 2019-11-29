@@ -1,7 +1,7 @@
 <!doctype html> <!--   ~/CPUFind.html   -->
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <style> * {padding:0; margin:0;}
-body {font-family: Verdana, sans-serif; font-size:0.8em; background:#98ddde;}
+body {font-family: Verdana, sans-serif; font-size:0.8em;}
 header, nav, section, article, aside, footer {border:1px solid gray; margin:5px; padding:8px;}
 nav ul{margin:0; padding:0;}
 nav ul li{display:inline; margin:5px;}
@@ -24,20 +24,19 @@ ul.level_1 > li > ul {list-style:none;}
 </style><title>웹서버 프로그래밍</title></head>
 <body><header>
 <img src="https://dmsdn0101.github.io/homework/picture/wallpaper-424947.jpg" height="200px" width="100%">
-<h2>CPU관리에 환영합니다</h2></header>
+<h2>CPU관리에 오신 것을 환영합니다</h2></header>
 <nav><ul>
-<li><a href="./CPULogout.html">로그아웃</a></li><li><a href="./CPUFind.html">검색</a></li></ul></nav>
+<li><a href="./CPUHome.html">홈</a></li><li><a href="./CPUReg.html">제품등록</a></li></ul></nav>
 <section>
 <form action="./CPUResult.jps" method="post">
   <fieldset class="fset"><legend>검색</legend>
   <select name="search_select">
     <option value="stud_all" selected>전체</option>
-    <option value="stud_name">이름</option>
-    <option value="stud_hobby">취미</option>
+    <option value="stud_gender">회사</option>
+    <option value="modelname">모델명</option>
   </select>
   <input id="find_form" type="text" name="stud_search" size="20" maxlength="50"/>
   <input type="submit" value="검색">
-  <button><a href="https://dmsdn0101.github.io/20191120/CPUResult.html">결과예시</a></button>
   </fieldset>
 </form></section>
 <footer><p>&copy; 20XX Made by Korea. All rights reserved.</p></footer></body></html>

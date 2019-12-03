@@ -21,7 +21,33 @@ ul.level_1 > li > ul {list-style:none;}
 .level_2 span {display:inline-block; width:70px;}
 .level_2 input {width:100px;}
 #loginBtn button {margin-left:5px; height:42px;}
-</style><title>웹서버 프로그래밍</title></head>
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(function(){
+	$('#name').blur(function(){
+  	$.ajax({
+    	type:"POST",
+      url:"http://203.237.142.245/~s20151671/homework/idcheck.jsp",
+      data:{
+      	"name":$('#name').val()
+      },
+      success:function(data){
+      	//console.log($.trim(data));
+        if($.trim(data) == "YES"){
+        	//alert('사용가능');
+          $('#idcheck').html('<b style="font-size:14px; color:blue">가능</b>');
+          $('#regBtn').attr('disabled',false);
+        } else {
+        	$('#idcheck').html('<b style="font-size:14px; color:blue">불가</b>');
+          $('#regBtn').attr('disabled',true);
+        }
+      }
+    });
+  });
+});
+</script>
+<title>웹서버 프로그래밍</title></head>
 <body><header>
 <img src="https://dmsdn0101.github.io/homework/picture/wallpaper-424947.jpg" height="200px" width="100%">
 <h2>CPU관리에 오신 것을 환영합니다</h2></header>
@@ -88,7 +114,8 @@ ul.level_1 > li > ul {list-style:none;}
     <input class="id_form" type="radio" name="clock" value="2cl"/>
     </fieldset>
     <fieldset class="fset"><legend>모델명</legend>
-    <input type="text" name="modelname" size="18" maxlength="50" required/>
+    <input type="text" id="name" name="modelname" size="18" maxlength="50" required/>
+      <span id="idcheck"></span><br/>
     </fieldset><br/>
     <input class="button_form" type="submit" value="제품등록">
     <input class="button_form" type="reset" value="취 소">
